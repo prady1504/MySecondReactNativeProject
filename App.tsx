@@ -6,7 +6,14 @@
  */
 
 import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import Counter from './src/components/Counter';
+import Card from './src/components/Card';
+import GreetingCard from './src/UI/greetingcard';
+import TogglesProject from './src/UI/togglesProject';
+import TimerComponent from './src/components/Timer';
+import ToDo from './src/UI/ToDo';
+import Grid from './src/UI/grid';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -14,7 +21,11 @@ function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      {/* <GreetingCard /> */}
+      {/* <TogglesProject /> */}
+      <TimerComponent />
+      {/* <ToDo /> */}
+      {/* <Grid /> */}
     </View>
   );
 }
@@ -22,7 +33,15 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#F5FCFF',
+    marginTop: 50,
   },
+  text: {
+    color: 'white',
+    fontSize: 60,
+    textAlign: 'center',
+    marginTop: 50,
+  }
 });
 
 export default App;
