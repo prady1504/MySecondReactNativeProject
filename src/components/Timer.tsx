@@ -14,7 +14,7 @@ function TimerComponent() {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Elapsed Time:</Text>
-      <Text style={styles.time}>{seconds} seconds</Text>
+      <Text style={styles.time}>{seconds} {seconds > 1 ? 'seconds' : 'second'}</Text>
     </View>
   );
 }
